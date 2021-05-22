@@ -1,3 +1,3 @@
-# Fake store using ReactJS Redux TailwindCSS & Fake store API
+# Fake store
 
-This project is just for me to practice redux & tailwind
+This project is using ReactJS Redux TailwindCSS & Fake store API. This project is just for me to practice redux & tailwind (& maybe test?)
