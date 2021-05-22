@@ -1,10 +1,7 @@
 import axios from "axios";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import {
-  selectedProduct,
-  removeSelectedProduct,
-} from "../redux/actions/productActions";
+import { selectedProduct, removeSelectedProduct } from "./productActions";
 import { useSelector, useDispatch } from "react-redux";
 
 const ProductDetails = () => {

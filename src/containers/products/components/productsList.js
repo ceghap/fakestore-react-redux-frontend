@@ -1,8 +1,7 @@
-import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
-const Products = () => {
-  const products = useSelector((state) => state.allProducts.products);
+const Products = (props) => {
+  const { products } = props;
 
   const renderProductList = products.map((product) => {
     return (

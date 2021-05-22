@@ -1,10 +1,11 @@
 import axios from "axios";
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { setProducts } from "../redux/actions/productActions";
-import Products from "./products";
+import { useDispatch, useSelector } from "react-redux";
+import { setProducts } from "./productActions";
+import ProductsList from "./components/productsList";
 
-const ProductListing = () => {
+const ProductsView = () => {
+  const products = useSelector((state) => state.allProducts.products);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -20,9 +21,9 @@ const ProductListing = () => {
 
   return (
     <div className="container mx-auto">
-      <Products />
+      <ProductsList products={products} />
     </div>
   );
 };
 
-export default ProductListing;
+export default ProductsView;

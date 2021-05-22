@@ -1,7 +1,8 @@
-import Header from "./containers/header";
+import Header from "./containers/common/components/header";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import ProductListing from "./containers/productListing";
-import ProductDetails from "./containers/productDetails";
+import ProductsView from "./containers/products/productsView";
+import ProductDetails from "./containers/products/productDetails";
+import HomeView from "./public/HomeView";
 
 function App() {
   return (
@@ -10,9 +11,12 @@ function App() {
         <Header />
         <Switch>
           <Route path="/" exact>
-            <ProductListing />
+            <HomeView />
           </Route>
-          <Route path="/product/:id" exact>
+          <Route path="/products" exact>
+            <ProductsView />
+          </Route>
+          <Route path="/products/:id" exact>
             <ProductDetails />
           </Route>
           <Router>404 Not Found</Router>
