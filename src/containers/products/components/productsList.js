@@ -5,11 +5,11 @@ const Products = (props) => {
 
   const renderProductList = products.map((product) => {
     return (
-      <div
-        key={product.id}
-        className="bg-white hover:shadow-xl hover:border hover:border-gray-500 rounded-lg overflow-hidden cursor-pointer transition duration-300 ease-in-out transform hover:-translate-y-1"
-      >
-        <Link to={`/product/${product.id}`}>
+      <Link key={product.id} to={`/products/${product.id}`}>
+        <div
+          key={product.id}
+          className="bg-white hover:shadow-xl hover:border hover:border-gray-500 rounded-lg overflow-hidden cursor-pointer transition duration-300 ease-in-out transform hover:-translate-y-1"
+        >
           <div className="flex items-center justify-center p-4">
             <img
               className="h-40 w-auto"
@@ -28,13 +28,13 @@ const Products = (props) => {
             </p>
             <p className="text-gray-500 "> {product.category}</p>
           </div>
-        </Link>
-      </div>
+        </div>
+      </Link>
     );
   });
   return (
     <>
-      <h2 className="font-bold text-2xl uppercase mb-10">Our fake Products</h2>
+      <h2 className="font-bold text-2xl uppercase mb-10">Fake Products</h2>
       <div className="container mx-auto grid grid-cols-4 grid-rows-4 gap-4">
         {renderProductList}
       </div>
